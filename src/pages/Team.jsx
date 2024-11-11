@@ -37,7 +37,7 @@ const Team = () => {
           setScrolling(window.innerWidth);
             setTimeout(() => {
               setTransitioned(true); // Set transitioned flag to true after 1 second
-            }, 1000);
+            }, 1500);
           }
           else if (transitioned) {
             window.scrollBy(0, 25);

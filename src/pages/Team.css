@@ -26,8 +26,8 @@
 }
 
 .team-title img{
-  max-width: 90vw;  /* Make image responsive based on viewport width */
-  max-height: 90vh; /* Make image responsive based on viewport height */
+  max-width: 83vw;  /* Make image responsive based on viewport width */
+  max-height: 83vh; /* Make image responsive based on viewport height */
   object-fit: contain; /* Maintain aspect ratio */
   padding-left: 200vw;
   /* padding-right: 30vw; */
