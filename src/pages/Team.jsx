@@ -33,18 +33,17 @@ const Team = () => {
 
 
         if (e.deltaY > 0) {
-          if (currentPosition > -window.innerWidth/1.28) {
-            setScrolling((prev) => prev + 5);
-            if (scrolling+5 >= currentPosition/10) {
-              setTimeout(() => {
-                setTransitioned(true); // Set transitioned flag to true after 1 second
-              }, 1500);}
+          if (currentPosition > -window.innerWidth && !transitioned) {
+          setScrolling(window.innerWidth);
+            setTimeout(() => {
+              setTransitioned(true); // Set transitioned flag to true after 1 second
+            }, 1000);
           }
-          if (transitioned) {
-            window.scrollBy(0, 20);
+          else if (transitioned) {
+            window.scrollBy(0, 25);
           }
         } else {
-          window.scrollBy(0, -20);
+          window.scrollBy(0, -25);
         }
       };
 
@@ -54,7 +53,7 @@ const Team = () => {
         item.removeEventListener("wheel", handleScroll);
       };
     }
-  }, [loading, scrolling, transitioned]);
+  }, [loading, transitioned]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -144,7 +143,7 @@ const Team = () => {
               <img
                 src={ship}
                 style={{
-                  transform: `translateX(-${scrolling * 10}px)`, // Apply horizontal translation based on scroll state
+                  transform: `translateX(-${scrolling}px)`, // Apply horizontal translation based on scroll state
                   transition: "transform 0.9s ease-out", // Smooth transition for transform
                 }}
                 alt="ship"

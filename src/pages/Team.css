@@ -14,20 +14,28 @@
 
 
  .team-title{
-  padding-top: 9vh;
+  padding-top: 1rem;
   width: 100vw;
   height: 100vh;
   background-color: #000f16;
-  overflow-y: scroll;
-  
+  overflow: auto;
+  scrollbar-width: none; /* For Firefox */  
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center;     /* Center the image vertically */
 }
 
 .team-title img{
-  height:87vh;
-  padding-left: 100vw;
-  padding-right: 30vw;
+  max-width: 90vw;  /* Make image responsive based on viewport width */
+  max-height: 90vh; /* Make image responsive based on viewport height */
+  object-fit: contain; /* Maintain aspect ratio */
+  padding-left: 200vw;
+  /* padding-right: 30vw; */
 }
 
+.team-title::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
 /* .team-title h1{
     font-size: 3.75rem;
     color: #ED9340;
