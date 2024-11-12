@@ -1,10 +1,13 @@
 .page-loader-main {
-  background-image: url(../assets/clear-black-wall-template.webp);
+  background-image: url(../assets/clear-blue-wall.jpg);
   height: 100vh;
   width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .hexagon {
-  color: #dfbb55;
+  color: #b1df55;
   font: bold 1em/1.5 "Comfortaa", sans-serif;
   display: grid;
   place-items: center;
